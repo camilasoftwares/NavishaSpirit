@@ -1,0 +1,1653 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EBC4DF3E-E01B-444C-A380-36CE74FD0D65}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>AIMS.My.MyApplication</StartupObject>
+    <RootNamespace>AIMS</RootNamespace>
+    <AssemblyName>AIMS</AssemblyName>
+    <MyType>WindowsForms</MyType>
+    <ApplicationIcon>AIMS.ico</ApplicationIcon>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>AIMS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>AIMS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAL\ModCreditNoteDAL.vb" />
+    <Compile Include="DAL\ModDebitNoteDAL.vb" />
+    <Compile Include="DAL\ModDivisionMasterDAL.vb" />
+    <Compile Include="DAL\ModHQMasterDAL.vb" />
+    <Compile Include="DAL\ModAccountGroupDAL.vb" />
+    <Compile Include="DAL\ModAccountHeadDAL.vb" />
+    <Compile Include="DAL\ModApplicationValueMasterDAL.vb" />
+    <Compile Include="DAL\ModBranchMasterDAL.vb" />
+    <Compile Include="DAL\ModCashPaymentDAL.vb" />
+    <Compile Include="DAL\ModCashReceiptDAL.vb" />
+    <Compile Include="DAL\ModCategoryMasterDAL.vb" />
+    <Compile Include="DAL\ModChequePaymentDAL.vb" />
+    <Compile Include="DAL\ModChequeReceiptDAL.vb" />
+    <Compile Include="DAL\ModCompanyInfoDAL.vb" />
+    <Compile Include="DAL\ModCurrentFreeStockDAL.vb" />
+    <Compile Include="DAL\ModCurrentStockDAL.vb" />
+    <Compile Include="DAL\ModCustomerMasterDAL.vb" />
+    <Compile Include="DAL\ModCustomerTypeDAL.vb" />
+    <Compile Include="DAL\ModCustomerTypePriceDAL.vb" />
+    <Compile Include="DAL\ModDestructionSlipDetailDAL.vb" />
+    <Compile Include="DAL\ModDestructionSlipMasterDAL.vb" />
+    <Compile Include="DAL\ModDoctorMasterDAL.vb" />
+    <Compile Include="DAL\ModExpiryDetailDAL.vb" />
+    <Compile Include="DAL\ModFreeItemDetailDAL.vb" />
+    <Compile Include="DAL\ModFreeStockTransactionDAL.vb" />
+    <Compile Include="DAL\ModGenericMasterDAL.vb" />
+    <Compile Include="DAL\ModItemMasterDAL.vb" />
+    <Compile Include="DAL\ModJournalEntryDAL.vb" />
+    <Compile Include="DAL\ModLegalTermsDAL.vb" />
+    <Compile Include="DAL\ModManufacturerMasterDAL.vb" />
+    <Compile Include="DAL\ModOpeningStockDAL.vb" />
+    <Compile Include="DAL\ModPIMasterDAL.vb" />
+    <Compile Include="DAL\ModProfileMasterDAL.vb" />
+    <Compile Include="DAL\ModPurchaseDetailDAL.vb" />
+    <Compile Include="DAL\ModPurchaseMasterDAL.vb" />
+    <Compile Include="DAL\ModPurchaseOrderDetailDAL.vb" />
+    <Compile Include="DAL\ModPurchaseOrderMasterDAL.vb" />
+    <Compile Include="DAL\ModPurchaseReturnDetailDAL.vb" />
+    <Compile Include="DAL\ModPurchaseReturnMasterDAL.vb" />
+    <Compile Include="DAL\ModReportsDAL.vb" />
+    <Compile Include="DAL\ModSalesDetailDAL.vb" />
+    <Compile Include="DAL\ModSalesMasterDAL.vb" />
+    <Compile Include="DAL\ModSalesReturnDetailDAL.vb" />
+    <Compile Include="DAL\ModSalesReturnMasterDAL.vb" />
+    <Compile Include="DAL\ModSampleDetailDAL.vb" />
+    <Compile Include="DAL\ModSampleMasterDAL.vb" />
+    <Compile Include="DAL\ModScheduleMasterDAL.vb" />
+    <Compile Include="DAL\ModSpecialityMasterDAL.vb" />
+    <Compile Include="DAL\ModStorageMasterDAL.vb" />
+    <Compile Include="DAL\ModTaxMasterDAL.vb" />
+    <Compile Include="DAL\ModTempAccountDAL.vb" />
+    <Compile Include="DAL\ModTrackLogDAL.vb" />
+    <Compile Include="DAL\ModTransactionAccountDAL.vb" />
+    <Compile Include="DAL\ModTransactionStockDAL.vb" />
+    <Compile Include="DAL\ModTransporterDAL.vb" />
+    <Compile Include="DAL\ModUserMasterDAL.vb" />
+    <Compile Include="DAL\ModVendorDetailDAL.vb" />
+    <Compile Include="DAL\ModVendorMasterDAL.vb" />
+    <Compile Include="Dialogs\DlgCollectionRegisterRpt.Designer.vb">
+      <DependentUpon>DlgCollectionRegisterRpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DlgCollectionRegisterRpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DlgInputBox.Designer.vb">
+      <DependentUpon>DlgInputBox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DlgInputBox.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DlgItemwiseSaleRpt.Designer.vb">
+      <DependentUpon>DlgItemwiseSaleRpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DlgItemwiseSaleRpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DlgLR.Designer.vb">
+      <DependentUpon>DlgLR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DlgLR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DlgBankBookRpt.Designer.vb">
+      <DependentUpon>DlgBankBookRpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DlgBankBookRpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DlgCashBookRpt.Designer.vb">
+      <DependentUpon>DlgCashBookRpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DlgCashBookRpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DlgCreditSaleRpt.Designer.vb">
+      <DependentUpon>DlgCreditSaleRpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DlgCreditSaleRpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DlgCustomerWiseSampleRpt.Designer.vb">
+      <DependentUpon>DlgCustomerWiseSampleRpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DlgCustomerWiseSampleRpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DlgExpiryDetailRpt.Designer.vb">
+      <DependentUpon>DlgExpiryDetailRpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DlgExpiryDetailRpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DlgExpiryRpt.designer.vb">
+      <DependentUpon>DlgExpiryRpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DlgExpiryRpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DlgGrossPurchaseRpt.designer.vb">
+      <DependentUpon>DlgGrossPurchaseRpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DlgGrossPurchaseRpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DlgHQWiseSaleRpt.Designer.vb">
+      <DependentUpon>DlgHQWiseSaleRpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DlgHQWiseSaleRpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DlgItemsAvailabilityRpt.Designer.vb">
+      <DependentUpon>DlgItemsAvailabilityRpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DlgItemsAvailabilityRpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DlgItemwisePartywiseSaleRpt.Designer.vb">
+      <DependentUpon>DlgItemwisePartywiseSaleRpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DlgItemwisePartywiseSaleRpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DlgLedgerBookRpt.Designer.vb">
+      <DependentUpon>DlgLedgerBookRpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DlgLedgerBookRpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DlgOutstandingRpt.Designer.vb">
+      <DependentUpon>DlgOutstandingRpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DlgOutstandingRpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DlgPartywiseSaleRpt.Designer.vb">
+      <DependentUpon>DlgPartywiseSaleRpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DlgPartywiseSaleRpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DlgPatientWiseSaleRpt.Designer.vb">
+      <DependentUpon>DlgPatientWiseSaleRpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DlgPatientWiseSaleRpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DlgPaymentRegisterRpt.Designer.vb">
+      <DependentUpon>DlgPaymentRegisterRpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DlgPaymentRegisterRpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DlgPurchaseReturnRpt.Designer.vb">
+      <DependentUpon>DlgPurchaseReturnRpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DlgPurchaseReturnRpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DlgPurchaseRpt.Designer.vb">
+      <DependentUpon>DlgPurchaseRpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DlgPurchaseRpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DlgSaleRegisterRpt.Designer.vb">
+      <DependentUpon>DlgSaleRegisterRpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DlgSaleRegisterRpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DlgSalesReturnRpt.Designer.vb">
+      <DependentUpon>DlgSalesReturnRpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DlgSalesReturnRpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DlgStockAndSaleRpt.Designer.vb">
+      <DependentUpon>DlgStockAndSaleRpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DlgStockAndSaleRpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DlgStockLedger.designer.vb">
+      <DependentUpon>DlgStockLedger.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DlgStockLedger.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DlgGrossSalesRpt.designer.vb">
+      <DependentUpon>DlgGrossSalesRpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DlgGrossSalesRpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DlgItemwisePurchaseRpt.designer.vb">
+      <DependentUpon>DlgItemwisePurchaseRpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DlgItemwisePurchaseRpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DlgJournalBookRpt.Designer.vb">
+      <DependentUpon>DlgJournalBookRpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DlgJournalBookRpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DlgStockInDemandRpt.Designer.vb">
+      <DependentUpon>DlgStockInDemandRpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DlgStockInDemandRpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DlgStockRpt.Designer.vb">
+      <DependentUpon>DlgStockRpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DlgStockRpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DlgTaxOnSalesRpt.Designer.vb">
+      <DependentUpon>DlgTaxOnSalesRpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DlgTaxOnSalesRpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DlgVendorwisePurchaseRpt.designer.vb">
+      <DependentUpon>DlgVendorwisePurchaseRpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DlgVendorwisePurchaseRpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entity\ClsAccountGroup.vb" />
+    <Compile Include="Entity\ClsAccountHead.vb" />
+    <Compile Include="Entity\ClsApplicationValueMaster.vb" />
+    <Compile Include="Entity\ClsBranchMaster.vb" />
+    <Compile Include="Entity\ClsCashPayment.vb" />
+    <Compile Include="Entity\ClsCashReceipt.vb" />
+    <Compile Include="Entity\ClsCategoryMaster.vb" />
+    <Compile Include="Entity\ClsChequePayment.vb" />
+    <Compile Include="Entity\ClsChequeReceipt.vb" />
+    <Compile Include="Entity\ClsCombBoxObject.vb" />
+    <Compile Include="Entity\ClsCompanyInfo.vb" />
+    <Compile Include="Entity\ClsCreditNote.vb" />
+    <Compile Include="Entity\ClsCurrentFreeStock.vb" />
+    <Compile Include="Entity\ClsCurrentStock.vb" />
+    <Compile Include="Entity\ClsCustomerMaster.vb" />
+    <Compile Include="Entity\ClsCustomerType.vb" />
+    <Compile Include="Entity\ClsCustomerTypePrice.vb" />
+    <Compile Include="Entity\ClsDebitNote.vb" />
+    <Compile Include="Entity\ClsDestructionSlipDetail.vb" />
+    <Compile Include="Entity\ClsDestructionSlipMaster.vb" />
+    <Compile Include="Entity\ClsDoctorMaster.vb" />
+    <Compile Include="Entity\ClsExpiryDetail.vb" />
+    <Compile Include="Entity\ClsFreeItemDetail.vb" />
+    <Compile Include="Entity\ClsFreeStockTransaction.vb" />
+    <Compile Include="Entity\ClsGenericMaster.vb" />
+    <Compile Include="Entity\ClsHQMaster.vb" />
+    <Compile Include="Entity\ClsIdName.vb" />
+    <Compile Include="Entity\ClsIdNameCreatedBy.vb" />
+    <Compile Include="Entity\ClsItemMaster.vb" />
+    <Compile Include="Entity\ClsJournalEntry.vb" />
+    <Compile Include="Entity\ClsLegalTerms.vb" />
+    <Compile Include="Entity\ClsManufacturerMaster.vb" />
+    <Compile Include="Entity\ClsOpeningStock.vb" />
+    <Compile Include="Entity\ClsPIMaster.vb" />
+    <Compile Include="Entity\ClsProfileMaster.vb" />
+    <Compile Include="Entity\ClsPurchaseDetail.vb" />
+    <Compile Include="Entity\ClsPurchaseMaster.vb" />
+    <Compile Include="Entity\ClsPurchaseOrderDetail.vb" />
+    <Compile Include="Entity\ClsPurchaseOrderMaster.vb" />
+    <Compile Include="Entity\ClsPurchaseReturnDetail.vb" />
+    <Compile Include="Entity\ClsPurchaseReturnMaster.vb" />
+    <Compile Include="Entity\ClsSalesDetail.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entity\ClsSalesMaster.vb" />
+    <Compile Include="Entity\ClsSalesReturnDetail.vb" />
+    <Compile Include="Entity\ClsSalesReturnMaster.vb" />
+    <Compile Include="Entity\ClsSampleDetail.vb" />
+    <Compile Include="Entity\ClsSampleMaster.vb" />
+    <Compile Include="Entity\ClsScheduleMaster.vb" />
+    <Compile Include="Entity\ClsSpecialityMaster.vb" />
+    <Compile Include="Entity\ClsStorageMaster.vb" />
+    <Compile Include="Entity\ClsTaxMaster.vb" />
+    <Compile Include="Entity\ClsTempAccount.vb" />
+    <Compile Include="Entity\ClsTrackLog.vb" />
+    <Compile Include="Entity\ClsTransactionAccount.vb" />
+    <Compile Include="Entity\ClsTransactionStock.vb" />
+    <Compile Include="Entity\ClsTransporter.vb" />
+    <Compile Include="Entity\ClsUserMaster.vb" />
+    <Compile Include="Entity\ClsVendorDetail.vb" />
+    <Compile Include="Entity\ClsVendorMaster.vb" />
+    <Compile Include="Entity\ClsDivisionMaster.vb" />
+    <Compile Include="Forms\ClsSearchCashPaymentForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ClsSearchCashReceiptForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ClsSearchChequePaymentForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ClsSearchChequeReceiptForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ClsSearchCreditNoteForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ClsSearchDebitNoteForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ClsSearchDestructionSlipForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ClsSearchPurchaseForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ClsSearchPurchaseOrderForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ClsSearchPurchaseReturnForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ClsSearchSaleForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ClsSearchSaleReturnForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ClsSearchSampleForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmAppSettings.Designer.vb">
+      <DependentUpon>FrmAppSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmAppSettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCreditNote.Designer.vb">
+      <DependentUpon>FrmCreditNote.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmCreditNote.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmDebitNote.Designer.vb">
+      <DependentUpon>FrmDebitNote.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmDebitNote.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmAccountGroups.Designer.vb">
+      <DependentUpon>FrmAccountGroups.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmAccountGroups.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmAccountHeads.Designer.vb">
+      <DependentUpon>FrmAccountHeads.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmAccountHeads.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmBranchMaster.Designer.vb">
+      <DependentUpon>FrmBranchMaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmBranchMaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCashPayment.Designer.vb">
+      <DependentUpon>FrmCashPayment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmCashPayment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCashReceipt.Designer.vb">
+      <DependentUpon>FrmCashReceipt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmCashReceipt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCategoryMaster.Designer.vb">
+      <DependentUpon>FrmCategoryMaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmCategoryMaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmChequePayment.Designer.vb">
+      <DependentUpon>FrmChequePayment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmChequePayment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmChequeReceipt.Designer.vb">
+      <DependentUpon>FrmChequeReceipt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmChequeReceipt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCompanyInfo.Designer.vb">
+      <DependentUpon>FrmCompanyInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmCompanyInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCustomerMaster.Designer.vb">
+      <DependentUpon>FrmCustomerMaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmCustomerMaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCustomerType.Designer.vb">
+      <DependentUpon>FrmCustomerType.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmCustomerType.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCustomerTypePrice.Designer.vb">
+      <DependentUpon>FrmCustomerTypePrice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmCustomerTypePrice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmDestructionSlip.Designer.vb">
+      <DependentUpon>FrmDestructionSlip.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmDestructionSlip.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmDivisionMaster.Designer.vb">
+      <DependentUpon>FrmDivisionMaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmDivisionMaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmDoctorMaster.Designer.vb">
+      <DependentUpon>FrmDoctorMaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmDoctorMaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmExpiry.Designer.vb">
+      <DependentUpon>FrmExpiry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmExpiry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmFreeItems.Designer.vb">
+      <DependentUpon>FrmFreeItems.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmFreeItems.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmFreeStockTransaction.Designer.vb">
+      <DependentUpon>FrmFreeStockTransaction.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmFreeStockTransaction.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmGenericMaster.Designer.vb">
+      <DependentUpon>FrmGenericMaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmGenericMaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmHQMaster.Designer.vb">
+      <DependentUpon>FrmHQMaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmHQMaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmItemMaster.Designer.vb">
+      <DependentUpon>FrmItemMaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmItemMaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmJournalEntry.Designer.vb">
+      <DependentUpon>FrmJournalEntry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmJournalEntry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmLegalTerms.Designer.vb">
+      <DependentUpon>FrmLegalTerms.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmLegalTerms.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmManufacturerMaster.Designer.vb">
+      <DependentUpon>FrmManufacturerMaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmManufacturerMaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmNewPassword.Designer.vb">
+      <DependentUpon>FrmNewPassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmNewPassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmOpeningStock.Designer.vb">
+      <DependentUpon>FrmOpeningStock.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmOpeningStock.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPIMaster.Designer.vb">
+      <DependentUpon>FrmPIMaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmPIMaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmProfileMaster.Designer.vb">
+      <DependentUpon>FrmProfileMaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmProfileMaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPurchase.Designer.vb">
+      <DependentUpon>FrmPurchase.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmPurchase.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPurchaseOrder.Designer.vb">
+      <DependentUpon>FrmPurchaseOrder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmPurchaseOrder.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPurchaseReturn.Designer.vb">
+      <DependentUpon>FrmPurchaseReturn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmPurchaseReturn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPurchaseReturnPartywise.Designer.vb">
+      <DependentUpon>FrmPurchaseReturnPartywise.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmPurchaseReturnPartywise.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmSaleCashOut.Designer.vb">
+      <DependentUpon>FrmSaleCashOut.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmSaleCashOut.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmSales.Designer.vb">
+      <DependentUpon>FrmSales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmSales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmSalesReturn.Designer.vb">
+      <DependentUpon>FrmSalesReturn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmSalesReturn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmSalesReturnPartywise.Designer.vb">
+      <DependentUpon>FrmSalesReturnPartywise.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmSalesReturnPartywise.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmSalesReturnWithoutBill.Designer.vb">
+      <DependentUpon>FrmSalesReturnWithoutBill.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmSalesReturnWithoutBill.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmSample.Designer.vb">
+      <DependentUpon>FrmSample.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmSample.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmScheduleMaster.Designer.vb">
+      <DependentUpon>FrmScheduleMaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmScheduleMaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmSearchToAll.Designer.vb">
+      <DependentUpon>FrmSearchToAll.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmSearchToAll.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmSpecialityMaster.Designer.vb">
+      <DependentUpon>FrmSpecialityMaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmSpecialityMaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmStorageMaster.Designer.vb">
+      <DependentUpon>FrmStorageMaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmStorageMaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmTaxMaster.Designer.vb">
+      <DependentUpon>FrmTaxMaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmTaxMaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmTrackLog.Designer.vb">
+      <DependentUpon>FrmTrackLog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmTrackLog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmTransferData.Designer.vb">
+      <DependentUpon>FrmTransferData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmTransferData.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmTransporter.Designer.vb">
+      <DependentUpon>FrmTransporter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmTransporter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmTrialBalance.Designer.vb">
+      <DependentUpon>FrmTrialBalance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmTrialBalance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmUserMaster.Designer.vb">
+      <DependentUpon>FrmUserMaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmUserMaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmVendorMaster.Designer.vb">
+      <DependentUpon>FrmVendorMaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmVendorMaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Others\ClsDBFunctions.vb" />
+    <Compile Include="Others\ClsTextReport.vb" />
+    <Compile Include="Others\FrmConnectionString.Designer.vb">
+      <DependentUpon>FrmConnectionString.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Others\FrmConnectionString.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Others\FrmLogin.Designer.vb">
+      <DependentUpon>FrmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Others\FrmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Others\FrmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Others\FrmMain.Designer.vb">
+      <DependentUpon>FrmMain.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Others\ModApplicationValues.vb" />
+    <Compile Include="Others\ModAuthorizationNo.vb" />
+    <Compile Include="Others\ModCommonFunctions.vb" />
+    <Compile Include="Others\ModConstants.vb" />
+    <Compile Include="Others\SplashScreen.Designer.vb">
+      <DependentUpon>SplashScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Others\SplashScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\RptChequePayment.vb">
+      <DependentUpon>RptChequePayment.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\RptCashPayment.vb">
+      <DependentUpon>RptCashPayment.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\RptCashReceipt.vb">
+      <DependentUpon>RptCashReceipt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reports\RptChequeReceipt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptChequeReceipt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptCreditNote.vb">
+      <DependentUpon>RptCreditNote.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reports\RptDebitNote.vb">
+      <DependentUpon>RptDebitNote.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\RptCollectionRegister.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptCollectionRegister.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptCreditSale.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptCreditSale.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptCustomerWiseSample.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptCustomerWiseSample.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptDatewiseSalesReturn.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptDatewiseSalesReturn.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptDestructionSlip.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptDestructionSlip.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptExpiryDetail.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptExpiryDetail.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptGrossPurchase.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptGrossPurchase.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptHQWiseSale.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptHQWiseSale.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptItemsAvailability.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptItemsAvailability.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptItemwiseSale.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptItemwiseSale.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptOutstanding.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptOutstanding.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptPartyWiseSale.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptPartyWiseSale.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptPatientWiseSale.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptPatientWiseSale.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptDatewisePurchase.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptDatewisePurchase.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptPaymentRegister.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptPaymentRegister.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptPurchase.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptPurchase.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptPurchaseOrder.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptPurchaseOrder.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptPurchaseReturn.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptPurchaseReturn.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptDatewisePurchaseReturn.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptDatewisePurchaseReturn.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptSaleRegister.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptSaleRegister.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptSales.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptSales.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptSalesReturn.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptSalesReturn.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptSample.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptSample.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptStockAndSale.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptStockAndSale.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptStockExpiry.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptStockExpiry.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptStockInDemand.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptStockInDemand.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptStockInHand.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptStockInHand.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptJournalBook.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptJournalBook.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptItemwisePurchase.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptItemwisePurchase.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptItemwisePartywiseSale.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptItemwisePartywiseSale.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptGrossSales.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptGrossSales.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptStockLedger.vb">
+      <SubType>Component</SubType>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptStockLedger.rpt</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DiagReport.Designer.vb">
+      <DependentUpon>DiagReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DiagReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\RptBankBook.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptBankBook.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptCashBook.vb">
+      <DependentUpon>RptCashBook.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reports\RptLedger.vb">
+      <DependentUpon>RptLedger.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reports\RptTaxOnSales.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptTaxOnSales.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptTrialBalance.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptTrialBalance.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptVendorWisePurchase.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptVendorWisePurchase.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Scripts\ClsScriptFunctions.vb" />
+    <Compile Include="Scripts\ClsScripts.vb" />
+    <Compile Include="Scripts\ClsScriptsReport.vb" />
+    <Compile Include="Scripts\ClsTransferScripts.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\DlgBankBookRpt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DlgBankBookRpt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DlgCashBookRpt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DlgCashBookRpt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DlgCollectionRegisterRpt.resx">
+      <DependentUpon>DlgCollectionRegisterRpt.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DlgCreditSaleRpt.resx">
+      <DependentUpon>DlgCreditSaleRpt.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DlgCustomerWiseSampleRpt.resx">
+      <DependentUpon>DlgCustomerWiseSampleRpt.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DlgExpiryDetailRpt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DlgExpiryDetailRpt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DlgExpiryRpt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DlgExpiryRpt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DlgGrossPurchaseRpt.resx">
+      <DependentUpon>DlgGrossPurchaseRpt.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DlgHQWiseSaleRpt.resx">
+      <DependentUpon>DlgHQWiseSaleRpt.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DlgInputBox.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DlgInputBox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DlgItemsAvailabilityRpt.resx">
+      <DependentUpon>DlgItemsAvailabilityRpt.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DlgItemwisePartywiseSaleRpt.resx">
+      <DependentUpon>DlgItemwisePartywiseSaleRpt.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DlgItemwiseSaleRpt.resx">
+      <DependentUpon>DlgItemwiseSaleRpt.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DlgLedgerBookRpt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DlgLedgerBookRpt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DlgLR.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DlgLR.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DlgOutstandingRpt.resx">
+      <DependentUpon>DlgOutstandingRpt.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DlgPartywiseSaleRpt.resx">
+      <DependentUpon>DlgPartywiseSaleRpt.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DlgPatientWiseSaleRpt.resx">
+      <DependentUpon>DlgPatientWiseSaleRpt.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DlgPaymentRegisterRpt.resx">
+      <DependentUpon>DlgPaymentRegisterRpt.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DlgPurchaseReturnRpt.resx">
+      <DependentUpon>DlgPurchaseReturnRpt.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DlgPurchaseRpt.resx">
+      <DependentUpon>DlgPurchaseRpt.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DlgSaleRegisterRpt.resx">
+      <DependentUpon>DlgSaleRegisterRpt.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DlgSalesReturnRpt.resx">
+      <DependentUpon>DlgSalesReturnRpt.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DlgStockAndSaleRpt.resx">
+      <DependentUpon>DlgStockAndSaleRpt.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DlgStockLedger.resx">
+      <DependentUpon>DlgStockLedger.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DlgGrossSalesRpt.resx">
+      <DependentUpon>DlgGrossSalesRpt.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DlgItemwisePurchaseRpt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DlgItemwisePurchaseRpt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DlgJournalBookRpt.resx">
+      <DependentUpon>DlgJournalBookRpt.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DlgStockInDemandRpt.resx">
+      <DependentUpon>DlgStockInDemandRpt.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DlgStockRpt.resx">
+      <DependentUpon>DlgStockRpt.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DlgTaxOnSalesRpt.resx">
+      <DependentUpon>DlgTaxOnSalesRpt.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DlgVendorwisePurchaseRpt.resx">
+      <DependentUpon>DlgVendorwisePurchaseRpt.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmAppSettings.resx">
+      <DependentUpon>FrmAppSettings.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmCreditNote.resx">
+      <DependentUpon>FrmCreditNote.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmDebitNote.resx">
+      <DependentUpon>FrmDebitNote.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmAccountGroups.resx">
+      <DependentUpon>FrmAccountGroups.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmAccountHeads.resx">
+      <DependentUpon>FrmAccountHeads.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmBranchMaster.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmBranchMaster.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmCashPayment.resx">
+      <DependentUpon>FrmCashPayment.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmCashReceipt.resx">
+      <DependentUpon>FrmCashReceipt.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmCategoryMaster.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmCategoryMaster.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmChequePayment.resx">
+      <DependentUpon>FrmChequePayment.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmChequeReceipt.resx">
+      <DependentUpon>FrmChequeReceipt.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmCompanyInfo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmCompanyInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmCustomerMaster.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmCustomerMaster.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmCustomerType.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmCustomerType.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmCustomerTypePrice.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmCustomerTypePrice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmDestructionSlip.resx">
+      <DependentUpon>FrmDestructionSlip.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmDivisionMaster.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmDivisionMaster.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmDoctorMaster.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmDoctorMaster.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmExpiry.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmExpiry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmFreeItems.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmFreeItems.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmFreeStockTransaction.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmFreeStockTransaction.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmGenericMaster.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmGenericMaster.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmHQMaster.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmHQMaster.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmItemMaster.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmItemMaster.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmJournalEntry.resx">
+      <DependentUpon>FrmJournalEntry.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmLegalTerms.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmLegalTerms.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmManufacturerMaster.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmManufacturerMaster.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmNewPassword.resx">
+      <DependentUpon>FrmNewPassword.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmOpeningStock.resx">
+      <DependentUpon>FrmOpeningStock.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmPIMaster.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmPIMaster.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmProfileMaster.resx">
+      <DependentUpon>FrmProfileMaster.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmPurchase.resx">
+      <DependentUpon>FrmPurchase.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmPurchaseOrder.resx">
+      <DependentUpon>FrmPurchaseOrder.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmPurchaseReturn.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmPurchaseReturn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmPurchaseReturnPartywise.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmPurchaseReturnPartywise.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmSaleCashOut.resx">
+      <DependentUpon>FrmSaleCashOut.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmSales.resx">
+      <DependentUpon>FrmSales.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmSalesReturn.resx">
+      <DependentUpon>FrmSalesReturn.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmSalesReturnPartywise.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmSalesReturnPartywise.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmSalesReturnWithoutBill.resx">
+      <DependentUpon>FrmSalesReturnWithoutBill.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmSample.resx">
+      <DependentUpon>FrmSample.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmScheduleMaster.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmScheduleMaster.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmSearchToAll.resx">
+      <DependentUpon>FrmSearchToAll.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmSpecialityMaster.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmSpecialityMaster.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmStorageMaster.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmStorageMaster.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmTaxMaster.resx">
+      <DependentUpon>FrmTaxMaster.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmTrackLog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmTrackLog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmTransferData.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmTransferData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmTransporter.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmTransporter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmTrialBalance.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmTrialBalance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmUserMaster.resx">
+      <DependentUpon>FrmUserMaster.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmVendorMaster.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmVendorMaster.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Others\FrmConnectionString.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmConnectionString.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Others\FrmLogin.resx">
+      <DependentUpon>FrmLogin.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Others\FrmMain.resx">
+      <DependentUpon>FrmMain.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Others\SplashScreen.resx">
+      <DependentUpon>SplashScreen.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptChequePayment.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptChequePayment.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptCashPayment.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptCashPayment.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptCashReceipt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptCashReceipt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptChequeReceipt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptChequeReceipt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptCreditNote.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptCreditNote.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptDebitNote.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptDebitNote.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptCollectionRegister.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptCollectionRegister.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptCreditSale.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptCreditSale.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptCustomerWiseSample.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptCustomerWiseSample.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptDatewiseSalesReturn.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptDatewiseSalesReturn.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptDestructionSlip.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptDestructionSlip.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptExpiryDetail.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptExpiryDetail.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptGrossPurchase.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptGrossPurchase.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptHQWiseSale.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptHQWiseSale.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptItemsAvailability.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptItemsAvailability.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptItemwiseSale.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptItemwiseSale.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptOutstanding.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptOutstanding.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptPartyWiseSale.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptPartyWiseSale.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptPatientWiseSale.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptPatientWiseSale.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptDatewisePurchase.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptDatewisePurchase.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptPaymentRegister.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptPaymentRegister.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptPurchase.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptPurchase.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptPurchaseOrder.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptPurchaseOrder.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptPurchaseReturn.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptPurchaseReturn.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptDatewisePurchaseReturn.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptDatewisePurchaseReturn.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptSaleRegister.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptSaleRegister.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptSales.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptSales.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptSalesReturn.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptSalesReturn.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptSample.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptSample.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptStockAndSale.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptStockAndSale.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptStockExpiry.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptStockExpiry.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptStockInDemand.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptStockInDemand.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptStockInHand.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptStockInHand.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptJournalBook.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptJournalBook.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptItemwisePurchase.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptItemwisePurchase.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptItemwisePartywiseSale.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptItemwisePartywiseSale.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptGrossSales.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptGrossSales.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptStockLedger.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptStockLedger.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DiagReport.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DiagReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptBankBook.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptBankBook.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptCashBook.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptCashBook.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptLedger.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptLedger.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptTaxOnSales.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptTaxOnSales.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptTrialBalance.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptTrialBalance.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptVendorWisePurchase.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptVendorWisePurchase.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AIMS.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
